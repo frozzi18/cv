@@ -1,0 +1,12 @@
+nav {
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: grid;
+  grid-auto-flow: column;
+  row-gap: 1rem;
+  align-items: center;
+}
