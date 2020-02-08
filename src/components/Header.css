@@ -23,16 +23,23 @@ nav {
   text-transform: uppercase;
 }
 
-.nav-links {
+.nav-links-horizontal {
   display: none;
+}
+
+.nav-links-vertical {
+  display: grid;
   grid-auto-flow: row;
-  row-gap: 2rem;
+  row-gap: 4rem;
   align-items: center;
-  justify-items: center;
 }
 
 .icon-menu {
   display: block;
+}
+
+.hidden {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -40,11 +47,15 @@ nav {
     padding: 2rem 5rem;
   }
 
-  .nav-links {
+  .nav-links-horizontal {
     display: grid;
     grid-auto-flow: column;
     column-gap: 4rem;
     align-items: center;
+  }
+
+  .nav-links-vertical {
+    display: none;
   }
 
   .nav-link:hover {
