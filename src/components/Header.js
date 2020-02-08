@@ -1,11 +1,24 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './Header.css';
 
 export default class Header extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Halllo Header</h1>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <nav>
+          <a className='logo' href='/'>
+            Rozzi
+          </a>
+          <div className='nav-links'>
+            <a className='nav-link' href='#projects'>
+              Projects
+            </a>
+            <a className='nav-link' href='#contacts'>
+              Contacts
+            </a>
+          </div>
+        </nav>
+      </div>
+    );
+  }
 }
