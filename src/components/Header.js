@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ReactComponent as IconMenu } from '../assets/menu.svg';
 import './Header.css';
 
 export default class Header extends Component {
@@ -16,6 +17,7 @@ export default class Header extends Component {
             Contacts
           </a>
         </div>
+        <IconMenu className='icon-menu' />
       </nav>
     );
   }
