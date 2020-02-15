@@ -13,32 +13,54 @@ export default class Header extends Component {
   changeStyle = () => {
     this.setState({ isOpen: !this.state.isOpen });
   };
+
   render() {
     return (
-      <nav>
-        <a className="logo" href="/">
+      <section
+        className="md:fixed md:top-0 md:left-0 md:right-0 md:p-8 md:justify-between md:border 
+      md:border-solid md:border-gray-200 md:flex xl:px-8 xl:py-20"
+      >
+        <a className="font-bold uppercase" href="/">
           Rozzi
         </a>
-        <div className="nav-links-horizontal">
-          <a className="nav-link" href="#projects">
+        <div className="md:hidden xl:grid xl:grid-flow-col xl:col-gap-16 xl:items-center">
+          <a
+            className="md:hover:text-black xl:hover:text-blue-700"
+            href="#projects"
+          >
             Projects
           </a>
-          <a className="nav-link" href="#contacts">
+          <a
+            className="md:hover:text-black xl:hover:text-blue-700"
+            href="#contacts"
+          >
             Contacts
           </a>
         </div>
-        <div className={this.state.isOpen ? "nav-links-vertical" : "hidden"}>
+        <div
+          className={
+            this.state.isOpen
+              ? "md:grid md:grid-flow-row md:row-gap-16 md:items-center xl:hidden"
+              : "hidden"
+          }
+        >
           <div className="nav-links">
-            <a className="nav-link" href="#projects">
+            <a
+              className="md:hover:text-black xl:hover:text-blue-700"
+              href="#projects"
+            >
               Projects
             </a>
-            <a className="nav-link" href="#contacts">
+            <a
+              className="md:hover:text-black xl:hover:text-blue-700"
+              href="#contacts"
+            >
               Contacts
             </a>
           </div>
         </div>
-        <IconMenu className="icon-menu" onClick={this.changeStyle} />
-      </nav>
+        <IconMenu className="md:block xl:hidden" onClick={this.changeStyle} />
+      </section>
     );
   }
 }
