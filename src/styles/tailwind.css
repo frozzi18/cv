@@ -1,6 +1,118 @@
 /* purgecss start ignore */
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('../assets/fonts/cooperhewitt-book-webfont.woff2') format('woff2'),
+    url('../assets/fonts/cooperhewitt-book-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('../assets/fonts/cooperhewitt-bookitalic-webfont.woff2')
+      format('woff2'),
+    url('../assets/fonts/cooperhewitt-bookitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('../assets/fonts/cooperhewitt-heavy-webfont.woff2') format('woff2'),
+    url('../assets/fonts/cooperhewitt-heavy-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('../assets/fonts/cooperhewitt-heavyitalic-webfont.woff2')
+      format('woff2'),
+    url('../assets/fonts/cooperhewitt-heavyitalic-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('../assets/fonts/cooperhewitt-semibold-webfont.woff2')
+      format('woff2'),
+    url('../assets/fonts/cooperhewitt-semibold-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  src: url('../assets/fonts/cooperhewitt-semibolditalic-webfont.woff2')
+      format('woff2'),
+    url('../assets/fonts/cooperhewitt-semibolditalic-webfont.woff')
+      format('woff');
+  font-weight: 600;
+  font-style: italic;
+}
+
 @tailwind base;
-@tailwind components;
 /* purgecss end ignore */
 
 @tailwind utilities;
+
+/* Custom CSS */
+
+.giant-heading {
+  @apply font-black uppercase leading-overlap tracking-tight;
+}
+
+.isolated-comma {
+  @apply inline-block relative;
+}
+
+@screen lg {
+  .giant-heading {
+    font-size: 10rem;
+  }
+
+  .isolated-comma {
+    top: -1rem;
+  }
+}
+
+@screen xl {
+  .giant-heading {
+    font-size: 12.5rem;
+  }
+
+  .isolated-comma {
+    top: -1.8rem;
+  }
+}
+
+@screen 2xl {
+  .giant-heading {
+    font-size: 14.5rem;
+  }
+
+  .isolated-comma {
+    top: -2rem;
+  }
+}
+
+@screen 3xl {
+  .giant-heading {
+    font-size: 16.5rem;
+  }
+
+  .isolated-comma {
+    top: -2.5rem;
+  }
+}
+
+@screen 4xl {
+  .giant-heading {
+    font-size: 20rem;
+  }
+
+  .isolated-comma {
+    top: -3rem;
+  }
+}
