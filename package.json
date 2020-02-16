@@ -6,12 +6,14 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
+    "framer-motion": "^1.8.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.1"
   },
   "scripts": {
     "build:style": "postcss src/styles/tailwind.css -o src/styles/index.css",
+    "build:style:watch": "postcss src/styles/tailwind.css -o src/styles/index.css --watch",
     "start": "npm run build:style && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
